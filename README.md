@@ -1,5 +1,12 @@
 # language-analytics-assignment2
-Assignment 2 for Language Analytics: Classifying fake news with logistic regression and ANNs.
+Assignment 2 for Language Analytics: Classifying fake news with logistic regression and ANNs based on bag-of-words representations.
+
+The data is available on [Kaggle](https://www.kaggle.com/datasets/jillanisofttech/fake-or-real-news).
+The downloaded csv file should be placed in a `data` directory:
+```
+- data/
+    fake_or_real_news.csv
+```
 
 ## Usage
 
@@ -21,7 +28,7 @@ Run Neural Network benchmark:
 python3 src/neural_network.py
 ```
 
-Both files save reports to the `out/` folder in the form of txt files
+Both files save classification reports to the `out/` folder in the form of txt files
 and serialize models as pipelines, including the vectorizer with `joblib`.
 
 To load the fitted models in a separate script for inference:
@@ -32,3 +39,6 @@ import joblib
 classifier = joblib.load("models/logistic_regression.joblib")
 classifier.predict(["Write your text here"])
 ```
+
+> Additionally the scripts will produce csv files with the CO2 emissions of the substasks in the code (`emissions/`).
+> This is necessary for Assignment 5, and is not directly relevant to this assignment.
