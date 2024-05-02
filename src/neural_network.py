@@ -2,6 +2,7 @@ from pathlib import Path
 
 import joblib
 import pandas as pd
+from codecarbon import EmissionsTracker
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split
